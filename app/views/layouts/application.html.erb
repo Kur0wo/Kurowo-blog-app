@@ -16,11 +16,19 @@
       <p class="header_pageTitle">新着記事</p>
       <div class="dropdown">
         <%= image_tag 'default-avatar.png', class: 'header_avatar dropbtn' %>
+        <div class="dropdown-content">
           <a href="#">プロフィール</a>
           <a href="#">ログアウト</a>
         </div>
       </div>
     </header>
+      <% if flash.present? %>
+        <div calss="flash">
+          <% flash.each do |key, value| %>
+            <div class="<%= key %><%= value %></div>
+          <% end %>
+        </div>
+      <% end %>
     <%= yield %>
   </body>
 </html>
