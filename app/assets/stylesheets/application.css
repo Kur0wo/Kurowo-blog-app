@@ -6,6 +6,27 @@
   font-weight: bold;
 }
 
+.header_loginBtn {
+  background-color: #f1f5f7;
+  height: 40px;
+  border-radius: 8px;
+  font-size: 12px;
+  padding: 12px 16px;
+  color: #8AC542;
+}
+
+.header_logos {
+  min-width: 0;
+  display: flex;
+}
+
+.header_logos img {
+  cursor: pointer;
+  width: 16px;
+  height: 16px;
+  margin: 12px 8px 0;
+}
+
 .header_pageTitle {
   color: white;
   line-height: 40px;
@@ -16,41 +37,6 @@
   width: 40px;
   height: 40px;
   border-radius: 100%;
-}
-
-.dropbtn {
-  border: none;
-}
-
-.dropdown {
-  position: relative;
-  display: inline-block;
-}
-
-.dropdown-content {
-  font-weight: normal;
-  display: none;
-  right: 0;
-  position: absolute;
-  background-color: white;
-  min-width: 160px;
-  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
-  z-index: 1;
-}
-
-.dropdown-content a {
-  padding: 8px 16px;
-  text-decoration: none;
-  display: block;
-  color: #616161;
-}
-
-.dropdown-content a:hover {
-  background-color: white;
-}
-
-.dropdown:hover .dropdown-content {
-  display: block;
 }
 
 .tabs {
@@ -147,22 +133,36 @@
   position: relative;
 }
 
+.article h2 {
+  font-size: 16px;
+}
+
 .article_title {
   font-size: 22px;
 }
 
+.article_comment {
+  padding: 12px 0;
+}
+
 .article_detail {
   padding-top: 10px;
-  cursor: pointer;
   display: flex;
   font-size: 12px;
+  pasition: relative;
 }
 
 .article_detail img {
+  cursor: pointer;
   width: 32px;
   height: 32px;
   border-radius: 100%;
   margin-right: 16px;
+}
+
+.article_detail_actions {
+  right: 0px;
+  position: absolute;
 }
 
 .article_content {
@@ -190,6 +190,16 @@
   font-weight: bold;
 }
 
+.btn-secondary {
+  background-color: white;
+  border: solid 1px #8AC542;
+  width: 100%;
+  text-align: center;
+  color: #8AC542;
+  padding: 16px 0;
+  font-weight: bold;
+}
+
 input.text {
   width: 100%;
   margin: 8px 0px;
@@ -208,6 +218,144 @@ textarea {
   min-height: 440px;
   resize: vertical;
   border: 1px solid #EBEBEB;
+}
+
+.flash {
+  position: fixed;
+  top: 16px;
+  font-size: 12px;
+  right: 16px;
+  width: 160px;
+  background: white;
+  -webkit-animation: fade-in-out;
+  animation: fade-in-out;
+  visibility: hidden;
+  z-index: 1;
+  padding: 16px;
+  animation-duration: 5s;
+  box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.25);
+}
+
+@-webkit-keyframes fade-in-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+@keyframes fade-in-out {
+  0% {
+    visibility: visible;
+    opacity: 1;
+  }
+  50% {
+    visibility: visible;
+    opacity: 1;
+  }
+  100% {
+    visibility: hidden;
+    opacity: 0;
+  }
+}
+
+.dropbtn {
+  border: none;
+}
+
+.dropdown {
+  position: relative;
+  display: inline-block;
+}
+
+.dropdown-content {
+  font-weight: normal;
+  display: none;
+  right: 0;
+  position: absolute;
+  background-color: white;
+  min-width: 160px;
+  box-shadow: 0px 8px 16px 0px rgba(0, 0, 0, 0.2);
+  z-index: 1;
+}
+
+.dropdown-content.mini {
+  min-width: 100px;
+}
+
+.dropdown-content a {
+  padding: 8px 16px;
+  text-decoration: none;
+  display: block;
+  color: #616161;
+}
+
+.dropdown-content a:hover {
+  background-color: white;
+}
+
+.dropdown:hover .dropdown-content {
+  display: block;
+}
+
+.profilePage {
+  margin-top: 24px;
+}
+
+.profilePage_user {
+  display: flex;
+}
+
+.profilePage_user_image {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+}
+
+.profilePage_user_image img {
+  width: 56px;
+  height: 56px;
+}
+
+.profilePage_user_basicInfo {
+  margin-left: 16px;
+}
+
+.profilePage_user_actionButton {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  font-size: 12px;
+  border-radius: 4px;
+  border: 1px solid #8AC542;
+  font-weight: bold;
+  padding: 0px 8px;
+}
+
+.profilePage_user_actionButton a {
+  color: #8AC542;
+}
+
+.profilePage_user_name {
+  display: flex;
+  margin-bottom: 8px;
+}
+
+.profilePage_user_displayName {
+  font-size: 18px;
+  font-weight: bold;
+  margin-right: 8px;
+}
+
+.profilePage_user_introduction {
+  font-size: 12px;
 }
 
 html {
