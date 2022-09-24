@@ -6,6 +6,10 @@
   font-weight: bold;
 }
 
+.header a {
+  color: white;
+}
+
 .header_loginBtn {
   background-color: #f1f5f7;
   height: 40px;
