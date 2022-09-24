@@ -22,7 +22,7 @@
   padding-top: 10px;
   display: flex;
   font-size: 12px;
-  pasition: relative;
+  position: relative;
 }
 
 .article_detail img {
