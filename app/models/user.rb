@@ -25,6 +25,8 @@ class User < ApplicationRecord
   has_many :articles, dependent: :destroy
   has_one :profile, dependent: :destroy
 
+  delegate :birthday, :gender, to: :profile, allow_nil: true
+
   def has_written?(article)
     articles.exists?(id: article.id)
   end
@@ -35,14 +37,14 @@ class User < ApplicationRecord
     profile&.nickname || self.email.split('@').first
   end
 
-  def birthday
-    profile&.birthday
-  end
+  # def birthday
+  #  profile&.birthday
+  # end
 
-  def gender
-    profile&.gender
+  # def gender
+  # profile&.gender
     # => ['cohki0305', 'gmail.com']
-  end
+  # end
 
   def prepare_profile
     profile || build_profile
