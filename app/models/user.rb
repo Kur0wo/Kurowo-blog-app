@@ -23,6 +23,8 @@ class User < ApplicationRecord
         :recoverable, :rememberable, :validatable
 
   has_many :articles, dependent: :destroy
+  has_many :likes, dependent: :destroy
+  has_many :favorite_articles, through: :likes, source: :article
   has_one :profile, dependent: :destroy
 
   delegate :birthday, :age, to: :profile, allow_nil: true
@@ -31,9 +33,11 @@ class User < ApplicationRecord
     articles.exists?(id: article.id)
   end
 
-    # cohki0305@gmail.com
+  def has_liked?(article)
+    likes.exists?(article_id: article.id)
+  end
+
   def display_name
-    #ぼっち演算子&
     profile&.nickname || self.email.split('@').first
   end
 
